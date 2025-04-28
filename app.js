@@ -38,7 +38,7 @@ const main = () => {
     // apply the count option if it exists
     const countOption = args.find(option => option.startsWith(COUNT));
     if (countOption) {
-        result = countData(result)
+        result = countData(result);
     }
     
     // print the result

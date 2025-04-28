@@ -88,3 +88,12 @@ We will be really attentive to:
 
 - Code readability, structure and consistency
 - Tests, and how they are written
+
+
+## install:
+
+- ```npm i```
+
+## tests:
+
+- ```npm test```

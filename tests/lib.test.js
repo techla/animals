@@ -10,10 +10,10 @@ describe('filterData', () => {
         expect(testData).toStrictEqual(result);
       });
 
-    it('should return an empty array if no animal matches', () => {
+    it('should return a country names array if no animal matches', () => {
       const pattern = 'no_match';
       const result = filterData(pattern, testData);
-      expect(result).toStrictEqual([]);
+      expect(result).toBeUndefined();
     });
   });
   describe('standard cases', () => {
@@ -43,7 +43,7 @@ describe('countData', () => {
   describe('edge cases', () => {
     it('should return an empty array if no data was provided', () => {
       const result = countData();
-      expect(result).toStrictEqual([]);
+      expect(result).toBeUndefined();
     });
   });
   describe('standard cases', () => {

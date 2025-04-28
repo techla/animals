@@ -12,9 +12,8 @@ function filterData(pattern='', data=[]) {
     throw new Error('filterData: input data should be an array');
   }
     const lowerCasePattern = pattern.toLowerCase();
-  
     // we use reduce to filter the data and keep the structure
-    return data.reduce((countries, country) => {
+    const countries = data.reduce((countries, country) => {
       const people = country.people.reduce((people, person) => {
         const animals = person.animals.filter(animal =>
           animal.name.toLowerCase().includes(lowerCasePattern)
@@ -33,6 +32,7 @@ function filterData(pattern='', data=[]) {
   
       return countries;
     }, []);
+    return countries.length > 0 ? countries : undefined;
   }
 
 /**
@@ -48,7 +48,7 @@ function countData(data=[]) {
 
   // since we are juste modifiing a field value without changing the strcture,
   // we can use nested map functions here
-  return data.map(country => {
+  const countries = data.map(country => {
     const people = country.people.map(person => {
       const animalCount = person.animals.length;
       return {
@@ -61,6 +61,7 @@ function countData(data=[]) {
       people
     };
   });
+  return countries.length > 0 ? countries : undefined;
 }
 
 module.exports = {
