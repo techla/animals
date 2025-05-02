@@ -1,7 +1,7 @@
 const testData = [{
   name: "France",
   people: [{
-    name: "Jhon",
+    name: "John",
     animals: [
       { name: "Cat" },
       { name: "Dog" },
@@ -24,7 +24,7 @@ const filteredData = [
     name: "France",
     people: [
       {
-        name: "Jhon",
+        name: "John",
         animals: [
           {
             name: "Mouse"
@@ -39,7 +39,7 @@ const countedData = [{
   name: "France [2]",
   people: [
     {
-      name: "Jhon [4]",
+      name: "John [4]",
       animals: [
         {
           name: "Cat"
